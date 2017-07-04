@@ -4,9 +4,15 @@ import { Route } from 'react-router-dom'
 
 const Routes = (props) => (
   <div className={`col-xs-9 page-body`}>
-    <Route exact path="/" component={Posts} />
-    <Route path="/about" component={About} />
-    <Route path="/contact" component={Contact} />
+    <Route exact path="/" render={() => (
+      <Posts data={props.data} updateData={props.updateData}/>
+    )} />
+    <Route path="/about" render={() => (
+       <About data={props.data} updateData={props.updateData}/>    
+    )} />
+    <Route path="/contact" render={() => (
+       <Contact data={props.data} updateData={props.updateData}/>    
+    )} />
   </div>
 )
 

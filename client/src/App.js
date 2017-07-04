@@ -11,6 +11,7 @@ import './App.css';
 
 class App extends Component {
   render() {
+    let {pageData, pageDataAction} = this.props
     return (
       <Router>
         <div className="container app">
@@ -18,7 +19,7 @@ class App extends Component {
             <div className={`col-xs-3`}>
               <Sidebar />
             </div>
-            <Routes />
+            <Routes data={pageData} updateData={pageDataAction}/>
           </div>
         </div>
       </Router >

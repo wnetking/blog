@@ -1,7 +1,7 @@
 const InitialState = {
   pageData: {
-    title: 'Blog',
-    content: '<h1>This is blog page</h1>'
+    title: '',
+    content: ''
   }
 }
 

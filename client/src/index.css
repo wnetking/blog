@@ -4,7 +4,6 @@
 */
 
 html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
@@ -54,7 +53,7 @@ table {
 
 .app{
 	margin-top: 50px;
-	margin-bottom: 50%;
+	margin-bottom: 50px;
 	
 }
 
@@ -68,4 +67,129 @@ body{
 	background-color: #fff;
 	
 	box-shadow: -2px -1px 88px 0px rgba(0,0,0,0.17);
+}
+
+
+div.blog-post {
+    margin-bottom: 50px;
+}
+
+.blog-post .post-image img {
+    width: 100%;
+}
+
+.blog-post .post-image p {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.blog-post .post-image a {
+    font-weight: 600;
+}
+
+.blog-post .post-title h1 a {
+    color: #333333;
+    font-size: 30px;
+    line-height: 45px;
+    font-weight: 700;
+    margin-top: 24px;
+		text-decoration: none;
+}
+
+.blog-post .post-title h2 {
+    font-size: 25px;
+    line-height: 35px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.blog-post .post-info {
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: 500;
+    padding: 10px 0;
+    color: #8c8c8c;
+}
+
+.blog-post p {
+    font-size: 16px;
+    line-height: 30px;
+    color: #696868;
+    font-weight: 300;
+    letter-spacing: 0.8px;
+    font-family: "Poppins", sans-serif;
+}
+
+.button {
+    border: none;
+    font-family: inherit;
+    font-size: 16px;
+    color: inherit;
+    background: none;
+    cursor: pointer;
+    padding: 10px 60px;
+    padding-left: 0px;
+    display: inline-block;
+    margin: 8px 30px;
+    margin-left: 5px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    outline: none;
+    position: relative;
+   -webkit-transition: all 0.3s;
+   -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.button:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+   -webkit-transition: all 0.3s;
+   -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+
+.button:before {
+    font-family: 'FontAwesome';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    position: relative;
+   -webkit-font-smoothing: antialiased;
+}
+
+.button-style {
+    color: #1abc9c;
+    overflow: hidden;
+}
+
+.button-style:before {
+    position: absolute;
+    font-size: 27px;
+    line-height: 38px;
+    color: #1abc9c;
+   -webkit-transition: all 0.3s;
+   -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.button-style:active:before {
+    color: #1abc9c;
+}
+
+.button-anim:before {
+    left: 60%;
+    opacity: 0;
+    top: 0;
+}
+
+.button-anim:hover:before {
+    left: 75%;
+    opacity: 1;
 }
