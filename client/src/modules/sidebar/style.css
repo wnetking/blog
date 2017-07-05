@@ -1,129 +1,128 @@
-.sidebar-fixed{
-  position: fixed;
-    width: 20.8%;
+.sidebar-fixed {
 }
 
 .menu-link {
-    list-style: none;
-    padding: 25px;
-    margin: 0;
-    text-align: center;
+  list-style: none;
+  padding: 25px;
+  margin: 0;
+  text-align: center;
 }
 
 .menu-link li {
-    display: inline-block;
-    margin: 2px 4px;
+  display: inline-block;
+  margin: 2px 4px;
 }
 
 .menu-link li a {
-    display: block;
-    color: #333333;
-    text-align: center;
-    font-size: 13px;
-    transition: all 0.3s ease-in-out;
+  display: block;
+  color: #333333;
+  text-align: center;
+  font-size: 13px;
+  transition: all 0.3s ease-in-out;
 }
 
 .menu-link li a:hover {
-    color: #1abc9c;
+  color: #1abc9c;
 }
 
-.avatar{
-      box-shadow: -2px -1px 88px 0px rgba(0,0,0,0.17);
+.avatar {
+  box-shadow: -2px -1px 88px 0px rgba(0, 0, 0, 0.17);
 }
-.avatar img{
+
+.avatar img {
   display: block;
   width: 100%;
   filter: grayscale(100%);
 }
 
 .facebook {
-   background-color: #3b5998;
+  background-color: #3b5998;
 }
 
 .twitter {
-   background-color: #1da1f2;
+  background-color: #1da1f2;
 }
 
 .google-plus {
-   background-color: #dd4b39;
+  background-color: #dd4b39;
 }
 
 .instagram {
-   background-color: #464545;
+  background-color: #464545;
 }
 
 .linkedin {
-   background-color: #0077b5;
+  background-color: #0077b5;
 }
 
 .pinterest {
-   background-color: #bd081c;
+  background-color: #bd081c;
 }
 
 .youtube {
-   background-color: #cd201f;
+  background-color: #cd201f;
 }
 
 .vimeo {
-   background-color: #1ab7ea;
+  background-color: #1ab7ea;
 }
 
 .dribbble {
-   background-color: #ea4c89;
+  background-color: #ea4c89;
 }
 
 .behance {
-   background-color: #1769ff;
+  background-color: #1769ff;
 }
 
 .flickr {
-   background-color: #ff0084;
+  background-color: #ff0084;
 }
 
 .tumblr {
-   background-color: #35465c;
+  background-color: #35465c;
 }
 
 .foursquare {
-   background-color: #f94877;
+  background-color: #f94877;
 }
 
 .github {
-   background-color: #333333;
+  background-color: #333333;
 }
 
 .skype {
-   background-color: #00aff0;
+  background-color: #00aff0;
 }
 
-.name{
+.name {
   margin-bottom: 10px;
   font-size: 20px;
   font-weight: 700;
 }
 
-.profession{
+.profession {
   color: #c1c1c1;
-    font-weight: 400;
-    line-height: 30px;
-    font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+  font-size: 16px;
 }
 
-.details{
- text-align: center;
-    margin-bottom: 30px;
-    padding-top: 30px;
-    background: #ffffff;
-    
-    box-shadow: -2px -1px 88px 0px rgba(0,0,0,0.17);
+.details {
+  text-align: center;
+  margin-bottom: 30px;
+  padding-top: 30px;
+  background: #ffffff;
+
+  box-shadow: -2px -1px 88px 0px rgba(0, 0, 0, 0.17);
 }
 
-.social-icon{
+.social-icon {
   list-style: none;
-    padding: 20px;
-    margin: 20px 0 0;
-    text-align: center;
-    border-top: 1px dashed #cccccc;
+  padding: 20px;
+  margin: 20px 0 0;
+  text-align: center;
+  border-top: 1px dashed #cccccc;
 }
 
 .social-icon li {
@@ -146,7 +145,7 @@
 }
 
 .social-icon li a:hover {
-   box-shadow: 0px 8px 15px 0px rgba(90, 91, 95, 0.33);
+  box-shadow: 0px 8px 15px 0px rgba(90, 91, 95, 0.33);
 }
 
 .sub-title {

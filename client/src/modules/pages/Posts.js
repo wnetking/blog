@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
+import {Link} from 'react-router-dom'
 
 class Posts extends Component {
   constructor() {
@@ -53,6 +54,7 @@ class Posts extends Component {
       ]
     }
   }
+
   componentDidMount() {
     this.props.updateData({
       title: 'Blog',
@@ -61,7 +63,7 @@ class Posts extends Component {
   }
 
   render() {
-    let { data } = this.props
+    let {data} = this.props
     return (
       <div>
         <div className={`row`}>
@@ -73,19 +75,19 @@ class Posts extends Component {
           {this.state.content.map((item, index) => (
             <div key={index} className="col-md-12 blog-post">
               <div className="post-title">
-                <h1>
-                  <a href="single.html">
+                <h3>
+                  <Link to={`/post/${item.id}`}>
                     {item.title}
-                  </a>
-                </h1>
+                  </Link>
+                </h3>
               </div>
               <div className="post-info">
                 <span>{item.date} / by <a href="/">{item.autor}</a></span>
               </div>
               <p>{item.shortDesc}</p>
-              <a href="single.html" className="button button-style button-anim fa fa-long-arrow-right">
-                <span>Read More</span>
-              </a>
+              <Link to={`/post/${item.id}`}>
+                <span className="button button-style button-anim fa fa-long-arrow-right">Read More</span>
+              </Link>
             </div>
           ))}
         </div>
