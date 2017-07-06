@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
-import { Sidebar } from './modules'
-import { pageDataAction } from './store/actions'
+import React, {Component} from 'react';
+import {connect} from 'react-redux'
+import {bindActionCreators} from 'redux'
+import {Sidebar, ToTop} from './modules'
+import {pageDataAction} from './store/actions'
 import Routes from './Routes'
 
-import { BrowserRouter as Router } from 'react-router-dom'
+import {BrowserRouter as Router} from 'react-router-dom'
 
 import './App.css';
 
@@ -21,6 +21,7 @@ class App extends Component {
             </div>
             <Routes data={pageData} updateData={pageDataAction}/>
           </div>
+          <ToTop />
         </div>
       </Router >
     );

@@ -1,21 +1,18 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 import renderHTML from 'react-render-html';
 
 class About extends Component {
-  componentWillMount() {
-    this.props.updateData({});
-  }
   componentDidMount() {
-    let data = {
-      title: 'About',
-      content: `<h1 class="heading">This is about page</h1>
-                <p>In this page you find information about me.</p>`
-    }
-    this.props.updateData(data);
+    fetch(`/about`, {method: "POST"})
+      .then(res => res.json())
+      .then(content => {
+
+        this.props.updateData(content);
+      });
   }
 
   render() {
-    let { data } = this.props
+    let {data} = this.props
     return (
       <div>
         <div className={`row`}>
@@ -23,7 +20,7 @@ class About extends Component {
             {data.title}
           </h2>
         </div>
-        <div>
+        <div className="col-md-12 well-1">
           {renderHTML(data.content)}
         </div>
       </div>

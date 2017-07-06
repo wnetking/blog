@@ -1,18 +1,18 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 import renderHTML from 'react-render-html';
 
 class Contact extends Component {
   componentDidMount() {
-    let data = {
-      title: 'Contact',
-      content: `<h1 class="heading">This is contact page</h1>
-                <p>In this page you can whrite me a letter</p>`
-    }
-    this.props.updateData(data);
+    fetch(`/contact`, {method: "POST"})
+      .then(res => res.json())
+      .then(content => {
+
+        this.props.updateData(content);
+      });
   }
 
   render() {
-    let { data } = this.props
+    let {data} = this.props
     return (
       <div>
         <div className={`row`}>
@@ -20,7 +20,7 @@ class Contact extends Component {
             {data.title}
           </h2>
         </div>
-        <div>
+        <div className="col-md-12 well-1">
           {renderHTML(data.content)}
         </div>
       </div>

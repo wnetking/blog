@@ -6,56 +6,19 @@ class Posts extends Component {
     super()
 
     this.state = {
-      content: [
-        {
-          id: 1,
-          title: 'How to make your company website based on bootstrap framework on localhost?',
-          date: 'November 23, 2016',
-          autor: 'Admin',
-          shortDesc: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                      Molestiae ut ratione similique temporibus tempora dicta soluta? 
-                      Qui hic, voluptatem nemo quo corporis dignissimos voluptatum 
-                      debitis cumque fugiat mollitia quasi quod. Lorem ipsum dolor sit amet, 
-                      consectetur adipisicing elit. Molestiae ut ratione similique.`
-        },
-        {
-          id: 2,
-          title: 'How to make your company website based on bootstrap framework on localhost?',
-          date: 'November 23, 2016',
-          autor: 'Admin',
-          shortDesc: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                      Molestiae ut ratione similique temporibus tempora dicta soluta? 
-                      Qui hic, voluptatem nemo quo corporis dignissimos voluptatum 
-                      debitis cumque fugiat mollitia quasi quod. Lorem ipsum dolor sit amet, 
-                      consectetur adipisicing elit. Molestiae ut ratione similique.`
-        },
-        {
-          id: 3,
-          title: 'How to make your company website based on bootstrap framework on localhost?',
-          date: 'November 23, 2016',
-          autor: 'Admin',
-          shortDesc: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                      Molestiae ut ratione similique temporibus tempora dicta soluta? 
-                      Qui hic, voluptatem nemo quo corporis dignissimos voluptatum 
-                      debitis cumque fugiat mollitia quasi quod. Lorem ipsum dolor sit amet, 
-                      consectetur adipisicing elit. Molestiae ut ratione similique.`
-        },
-        {
-          id: 4,
-          title: 'How to make your company website based on bootstrap framework on localhost?',
-          date: 'November 23, 2016',
-          autor: 'Admin',
-          shortDesc: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                      Molestiae ut ratione similique temporibus tempora dicta soluta? 
-                      Qui hic, voluptatem nemo quo corporis dignissimos voluptatum 
-                      debitis cumque fugiat mollitia quasi quod. Lorem ipsum dolor sit amet, 
-                      consectetur adipisicing elit. Molestiae ut ratione similique.`
-        }
-      ]
+      content: []
     }
   }
 
   componentDidMount() {
+    fetch('/post', {method: "POST"})
+      .then(res => res.json())
+      .then(posts => {
+        this.setState({
+          content: posts
+        })
+      });
+
     this.props.updateData({
       title: 'Blog',
       content: ''
@@ -73,7 +36,7 @@ class Posts extends Component {
         </div>
         <div>
           {this.state.content.map((item, index) => (
-            <div key={index} className="col-md-12 blog-post">
+            <div key={index} className="blog-post">
               <div className="post-title">
                 <h3>
                   <Link to={`/post/${item.id}`}>
