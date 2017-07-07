@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux'
 import {bindActionCreators} from 'redux'
-import {Sidebar, ToTop} from './modules'
+import {Sidebar, ToTop, Footer} from './modules'
 import {pageDataAction} from './store/actions'
 import Routes from './Routes'
 
@@ -20,6 +20,9 @@ class App extends Component {
               <Sidebar />
             </div>
             <Routes data={pageData} updateData={pageDataAction}/>
+            <div className={`col-xs-offset-3 col-xs-9`}>
+              <Footer />
+            </div>
           </div>
           <ToTop />
         </div>

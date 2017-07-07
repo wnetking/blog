@@ -4,7 +4,8 @@ import Contact from './pages/Contact'
 import Post from './pages/Post'
 import Sidebar from './sidebar/Sidebar'
 import ToTop from './ToTop'
+import Footer from './footer/Footer'
 
 export {
-  Posts, About, Contact, Sidebar, Post, ToTop
+  Posts, About, Contact, Sidebar, Post, ToTop, Footer
 }

@@ -6,7 +6,6 @@ class Contact extends Component {
     fetch(`/contact`, {method: "POST"})
       .then(res => res.json())
       .then(content => {
-
         this.props.updateData(content);
       });
   }

@@ -1,0 +1,16 @@
+footer {
+  margin-top: 60px;
+  margin-right: -.5rem;
+  margin-left: -.5rem;
+  padding: 30px;
+  box-shadow: -2px -1px 88px 0px rgba(0, 0, 0, 0.17);
+  text-align: center;
+  background: #fff;
+  background:
+    linear-gradient(115deg, transparent 75%, rgba(255,255,255,.5) 75%) 0 0,
+    linear-gradient(245deg, transparent 75%, rgba(255,255,255,.5) 75%) 0 0,
+    linear-gradient(115deg, transparent 75%, rgba(255,255,255,.5) 75%) 7px -15px,
+    linear-gradient(245deg, transparent 75%, rgba(255,255,255,.5) 75%) 7px -15px,
+    #fafafa;
+  background-size: 15px 30px
+}
