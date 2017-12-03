@@ -1,0 +1,25 @@
+.page-header{
+  &.orange-fun{
+    background-color: #fc4a1a; /* fallback for old browsers */
+    background-image: linear-gradient(120deg, #fc4a1a, #f7b733);
+  }
+
+  &.hydrogen{
+    background-color: #667db6; /* fallback for old browsers */
+    background-image: linear-gradient(120deg, #667db6, #0082c8, #0082c8, #667db6);
+  }
+
+  &.king-yna{
+    background-color: #1a2a6c;  /* fallback for old browsers */
+    background-image: linear-gradient(120deg, #fdbb2d, #b21f1f, #1a2a6c);
+  }
+
+  &.summer{
+    background-color: #22c1c3;  
+    background-image: linear-gradient(120deg, #fdbb2d, #22c1c3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+  &.purpink{
+    background-color: #7F00FF;  /* fallback for old browsers */
+    background-image: linear-gradient(120deg, #E100FF, #7F00FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+}

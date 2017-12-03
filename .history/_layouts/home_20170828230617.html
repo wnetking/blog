@@ -1,0 +1,21 @@
+--- 
+layout: default 
+---
+
+<section class="page-header well-4">
+  <h1 class="project-name">
+    {{ site.title | default: site.github.repository_name }}
+  </h1>
+  <h2 class="project-tagline">
+    {{ site.sub_title | default: site.github.project_tagline }}
+  </h2>
+</section>
+
+<section class="main-content">
+  <h2 class="text-center">Что это?</h2>
+  <p>
+    Небольшой блог про front-end в котором собран
+    путь мло
+  </p>
+  {{ content }}
+</section>

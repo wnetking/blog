@@ -1,0 +1,30 @@
+--- 
+layout: default 
+---
+
+
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="page-header well-4">
+    <h1 class="project-name" itemprop="name headline">
+      {{ page.title | escape }}
+    </h1>
+    <h2 class="project-tagline">
+      {{ page.short_desc | escape }}
+    </h2>
+    <p class="post-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+        {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %} {{ page.date | date: date_format }}
+      </time><br>
+      {% if page.author %} 
+      <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>
+      {% endif %}</p>
+  </header>
+
+  <div class="main-content post-content" itemscope itemprop="articleBody">
+    {{ content }} 
+    
+    {% if site.disqus.shortname %} 
+      {% include disqus_comments.html %} 
+    {% endif %}
+  </div>
+</article>

@@ -1,0 +1,15 @@
+.social{
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+
+  li{
+    width: 40px;
+    list-style: none; 
+  }
+
+  svg{
+    fill: $body-text-color: #606c71 !default;
+
+  }
+}

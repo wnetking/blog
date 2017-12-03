@@ -1,0 +1,35 @@
+--- 
+layout: default 
+---
+
+<header class="page-header well-4">
+  <h1 class="project-name">
+    {{ site.title | default: site.github.repository_name }}
+  </h1>
+  <h2 class="project-tagline">
+    {{ site.sub_title | default: site.github.project_tagline }}
+  </h2>
+</header>
+
+<main class="main-content">
+  <section class="well-4">
+      <h2 class="text-center">Что это?</h2>
+      <p class="text-center">
+        {{ site.description | default: site.github.project_tagline }}
+      </p>
+  </section>
+  <section class="well-4">
+      <h2 class="text-center">Посты</h2>
+        {% for post in site.posts %}
+        <ac>
+          {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+          <span class="post-meta">
+            {{ post.date | date: date_format }}
+          </span>
+          <h2>
+            <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+          </h2>
+        </ac>
+        {% endfor %}
+    </section>
+</main>
